@@ -1,0 +1,155 @@
+html{
+	background-color: white;
+}
+
+.head{
+	overflow: auto;
+	background-color: gold;
+}
+
+.head img{
+	float: right;
+}
+
+.head h1{
+	float: left;
+	margin: 0;
+	padding: 20px;
+	font-size: 50px;
+	color: Black;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+}
+
+#slogan{
+	background-color: #4f66cc;
+	font-size: 17px;
+	color: white;
+	padding: 0px 20px;
+	display: flex;
+}
+
+ul#Options li{
+    float: left;
+    padding: 20px;
+}
+
+ul#Options{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color:#4f66cc;
+    overflow: hidden;
+}
+
+#Options > li:last-child {
+    float:right;
+}
+
+
+ul#Options li:hover, ul#Options li.index{
+    background-color: #5882FA;
+    color: #5882FA;
+    cursor: pointer;
+}
+
+.hiddenElement{
+	display: none;
+}
+
+textarea {
+  font-family: Arial;
+  border: 1px solid black;
+}
+
+table {
+  margin: 25px auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px;
+  font-family: Arial;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+td:hover
+{
+    cursor: pointer;
+    background: #666;
+    color: white;
+}
+	
+.NameT, .PostT{
+	font-weight: bold;
+}
+.name{
+	color: green;
+	font-weight: bold;
+}
+
+.post{
+	color: blue;
+}
+/*THIS SECTION IS FOR PROFILE.HTML*/
+h4{
+  font-size: 25px;
+  color: black;
+}
+
+.field{
+  font-size: 20px;
+ font-weight: bold; 
+}
+
+.display {
+  font-weight: normal;
+  font-size: 18px;
+  color: black;
+}
+
+.buttonUser{
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    height: 100px;
+    width: 200px;
+    margin: 5px 5px 0 0;
+    padding: 8px;
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 32px;
+    background-color: green;
+
+
+}
+.buttonUser:hover{
+    color:white;
+    background-color: #7fb0ff;
+    cursor: pointer;
+}
+
+.espacioLargo{
+    line-height: 90px;
+    font-size: 35px;
+    width: 500px;
+    height: 80px;
+}
+
+#addFriendBody{
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+}
+
+#searchBody{
+  text-align: center;
+}
