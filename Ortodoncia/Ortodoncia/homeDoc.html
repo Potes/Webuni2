@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title> Facultad de Odontologia UANL </title>
+<head>
+  <meta charset="UTF-8"/>
+  
+</head>
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
+<div class="head"> 
+	<a href="homeDoc.html">
+  		<img src="images/UANL.png">
+	</a>
+  	<link rel="stylesheet" type="text/css" href="CSS/stylesHome.css"> 
+</div>
+
+<ul id="Options">
+	<li class=Home id="selected"> <a href="homeDoc.html"> <h3> Home </a> </h3> </li>
+	<li class=UpdateProf> <a href="index.php"> <h3> Agendar cita </a> </h3> </li>
+  <li class=UpdateProf> <a href="BuscarPaciente.html"> <h3> Buscar Pacientes </a> </h3> </li>
+  <li class=UpdateProf> <a href="index.php"> <h3> Calendario </a> </h3> </li>
+    <li class=UpdateProf> <a href="Registro.html"> <h3> Registro de Paciente </a> </h3> </li>
+	<li class=SignOut id="logoutButton" value="Logout"> <a href="index.html"> <h3> Sign Out </a> </h3> </li>
+		
+</ul>
+
+
+<body>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="http://www.20minutos.es/noticia/3077922/0/analisis-muescas-neanderthales-iban-dentista-revela-evidencia-odontologica-prehistorica/#xtor=AD-15&xts=467263">
+      <img src="images/Noticia1.png" width="300" height="200">
+    </a>
+    <div class="desc">Los Neanderthales iban al 'dentista', según revela una evidencia de odontología prehistórica</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="http://www.20minutos.es/noticia/2793633/0/alertan-blancorexia-obsesion-dientes-blancos/#xtor=AD-15&xts=467263">
+      <img src="images/Noticia2.png" width="600" height="400">
+    </a>
+    <div class="desc">Alertan de que la blancorexia u obsesión por los dientes blancos puede provocar su pérdida
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="http://www.20minutos.es/noticia/2731926/0/justicia-francesa-dentista-horror/condena-carcel-practicas-ilegales/#xtor=AD-15&xts=467263">
+      <img src="images/Noticia3.png" width="600" height="400">
+    </a>
+    <div class="desc">La Justicia francesa condena a ocho años de cárcel al "dentista del horror" por prácticas ilegales
+</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="http://www.20minutos.es/noticia/2492341/0/caries-ninos-dentistas/granada-plan-andaluz/bucodental-junta-andalucia/#xtor=AD-15&xts=467263">
+      <img src="images/Noticia4.png" width="600" height="400">
+    </a>
+    <div class="desc">El consumo de zumos elaborados provoca caries en los menores, advierten dentistas granadinos
+</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/homeJQuery.js"></script>
+</body>
+</html>

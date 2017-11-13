@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title> Facultad de Odontologia UANL </title>
+<head>
+  <meta charset="UTF-8"/>
+</head>
+<div class="head"> 
+	<a href="homeDoc.html">
+  		<img src="images/UANL.png">
+	</a>
+  	<link rel="stylesheet" type="text/css" href="CSS/stylesHome.css">
+
+</div>
+
+<ul id="Options">
+	<li class=Home id="selected"> <a href="homeDoc.html"> <h3> Home </a> </h3> </li>
+	<li class=UpdateProf> <a href="index.php"> <h3> Agendar cita </a> </h3> </li>
+  <li class=UpdateProf> <a href="BuscarPaciente.html"> <h3> Buscar Pacientes </a> </h3> </li>
+  <li class=UpdateProf> <a href="index.php"> <h3> Calendario </a> </h3> </li>
+      <li class=UpdateProf> <a href="Registro.html"> <h3> Registro </a> </h3> </li>
+	<li class=SignOut> <a href="index.html"> <h3> Sign Out </a> </h3> </li>
+</ul>
+
+	<body>
+
+	<fieldset>
+				<h2 id="registration">Registration</h2>	
+				<p>First Name</br>
+				<input id="fName" type="text"/>
+				<span  id="nameError"></span>
+				</p>
+					
+				<p>Last Name</br>
+				<input id="lName" type="text"/>
+				<span  id="lNameError"></span>
+				</p>
+					
+				<p>Username</br>
+				<input id="uName" type="text"/>
+				<span  id="userError"></span>
+				</p>
+					
+				<p>E-mail</br>
+				<input id="uMail" type="text"/>
+				<span  id="mailError"></span>
+				</p>
+					
+				<p>Password</br>
+				<input id="uPass" type="password"/>
+				<span  id="passError"></span>
+				</p>
+					
+				<p>Doctor</br>
+				<input id="uDoc" type="text"/>
+				<span  id="docError"></span>
+				</p>	
+					
+				<p>Gender
+				<span id="genderSpan"></span></br>
+				<input id="Gender" type="radio" name="gender" value="1"/>Male
+				<input id="Gender" type="radio" name="gender" value="2"/>Female
+				</p>
+					
+				<p>Doctor or Patient<br>
+					<select id="utipo" class="required">		
+						<option value="0" selected disabled hidden>Select account type...</option>			
+						<option value="1">Paciente</option>
+						<option value="2">Doctor</option>
+					</select>
+					<span id="typeError"></span>
+				</p>
+				</br>
+				<p>
+					<input id="registrationSubmit" type="submit" value="Register"/>
+					<input id="cancelButton" type="submit" value="Cancel"/>
+				</p>
+	</fieldset>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/registerJQuery.js"></script>
+</body>
+</html>
