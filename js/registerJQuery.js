@@ -1,5 +1,3 @@
-//JQuery Code Registration
-
 $(document).ready(function(){
 
 	$("#registrationSubmit").on("click", function(){

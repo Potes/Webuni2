@@ -1,21 +1,14 @@
-//JQuery Code Login
-
 $(document).ready(function(){
-	console.log("Good Morning, Sir");
- 	
+
 	$("#submitLogin").on("click", function(){
 		var success = true;
-		//console.log("You clicked the Submit Button");
 		var user = $("#user").val();
-		//console.log(user);
 		if(user == ""){
-			//console.log("Username Missing");
 			$("#userSpan").text("Please provide Username");
 			success &= false;
 		}
 		else{
 			$("#userSpan").text("");
-			//localStorage.setItem("username",user);
 			success &= true;
 		}
 
@@ -26,7 +19,6 @@ $(document).ready(function(){
 		}
 		else{
 			$("#passwSpan").text("");
-			//localStorage.setItem("password",password);
 		}
 
 		var remember = 0;
