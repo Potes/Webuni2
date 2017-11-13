@@ -160,15 +160,19 @@ $(document).ready(function(){
 									var newHtml = '<div>';
 									newHtml += '<span class="userSearch">' + dataReceived[i].firstName + " " + dataReceived[i].lastName + "   ";
 									newHtml += '<input class="writenote" id="notetext" type="text" value="Write medical notes"/>' +'</span>';
-									newHtml += '<input class="sendnote" id="'+ dataReceived[i].userName +'" type="submit" value="send"/>' +'</span>';
+									newHtml += '<input class="sendnote" id="'+ dataReceived[i].userName +'" type="submit" value="Send"/>' +'</span>';
+									newHtml += '<input class="deleteuser" id="'+ dataReceived[i].userName +'" type="submit" value="Delete"/>' +'</span>';
 									newHtml += '</div>';
 									$("#searchUser").append(newHtml);
+
 								}	
 								if(count == 0){
 									var newHtml = '<div>';
 									newHtml += '<div class="userSearch"  style="color:red";>' + "User Not Found" + '</div>';
 									newHtml += '</div>';
 									$("#searchUser").append(newHtml);
+
+
 								}					
 							},
 							error : function(errorMessage){
@@ -186,14 +190,40 @@ $(document).ready(function(){
 					var sendnoteClick = $(this).attr("id");
 					var com = $(notetext).val();
 					console.log(com);
-					console.log(sendnoteClick);
+					console.log("username="+sendnoteClick);
 					$(".userSearch").remove();
 					$(".sendnote").remove();
+					$(".deleteuser").remove();
 					
 					var jsonToSend = {
 									"uName" : sendnoteClick,
 									"com" : com,
 									"action": "INSERT_COMMENT"
+									};
+					$.ajax({
+						url : "./data/applicationLayer.php",
+						type : "POST",
+						data : jsonToSend,
+						ContentType : "application/json",
+						dataType : "json",
+						success : function(dataReceived){
+							alert(dataReceived.comm);
+						},
+						error : function(errorMessage){
+							alert(errorMessage.statusText);
+						}
+					});	
+				});
+				$("#searchUser").on("click", ".deleteuser", function(){			
+					var sendnoteClick = $(this).attr("id");
+					console.log("username="+sendnoteClick);
+					$(".userSearch").remove();
+					$(".sendnote").remove();
+					$(".deleteuser").remove();
+					
+					var jsonToSend = {
+									"uName" : sendnoteClick,
+									"action": "DELETE_USER"
 									};
 					$.ajax({
 						url : "./data/applicationLayer.php",

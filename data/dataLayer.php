@@ -221,6 +221,28 @@
 			return array("MESSAGE" => "500");
 		}
 	}
+	
+		function attemptDeleteUser($userN){
+		$connection = databaseConnection();
+		
+		if($connection != null){
+			$sql = "DELETE FROM users WHERE username='$userN' LIMIT 1";
+			$result = $connection->query($sql);
+
+			if($connection->query($sql) === TRUE){
+				$response = array("MESSAGE"=>"SUCCESS");
+				$connection->close();
+				return $response;
+			}
+			else{
+				$connection->close();	
+				return array("MESSAGE"=>"406");
+			}
+		}
+		else{
+			return array("MESSAGE" => "500");
+		}
+	}
 
 	function attemptSearchUsers($user, $search){
 		$connection = databaseConnection();

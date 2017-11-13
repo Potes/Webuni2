@@ -22,6 +22,8 @@
 											break;
 		case "INSERT_COMMENT"			:	insertCommentFunction();
 											break;
+		case "DELETE_USER"				:	deleteUserFunction();
+											break;
 		case "SEARCH_USER"				:	searchUserFunction();
 											break;
 	}
@@ -155,6 +157,20 @@
 		}
 		else{
 			genericErrorFunction($insertCommentResponse["MESSAGE"]);
+		}
+	}
+	
+	function deleteUserFunction(){
+		$userN = $_POST["uName"];	
+
+		$deleteCommentResponse = attemptDeleteUser($userN);
+
+		if($deleteCommentResponse["MESSAGE"] == "SUCCESS"){
+			$response = array("message"=>"User Deleted");		
+			echo json_encode($response);
+		}
+		else{
+			genericErrorFunction($deleteCommentResponse["MESSAGE"]);
 		}
 	}
 
